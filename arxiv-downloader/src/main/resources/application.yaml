@@ -1,0 +1,39 @@
+spring:
+  application:
+    description: Arxiv downloader is a micro service for download of arxiv pages
+    name: arxiv-downloader
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/arXiv
+    username: lares
+    password: LARES2022som!
+
+feign:
+  httpclient:
+    disableSslValidation: true
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 10000
+
+security:
+  require-ssl: true
+
+server:
+  port: 9095
+
+config:
+  arxiv-path: https://ar5iv.labs.arxiv.org/html/
+  execution-properties:
+    downloadResult: 3
+    threadNumber: 6
+    chunkSize: 100
+    sleep: 1000
+
+files:
+  folder-out: /home/lares/arxiv_pages/
+  checkSum-algorithm: MD5
+  output-format: .html

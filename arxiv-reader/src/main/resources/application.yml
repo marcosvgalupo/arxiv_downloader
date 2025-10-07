@@ -1,0 +1,33 @@
+spring:
+  application:
+    description: Arxiv reader is a micro service for read of arxiv pages from disk
+    name: arxiv-reader
+
+folder:
+  list:
+    - C:\Users\filip\Documents\arvix_pages\folder_1
+    - C:\Users\filip\Documents\arvix_pages\folder_2
+
+threads:
+  readerPool:
+    prefix: READER-
+    max: 30
+    core: 30
+    keepAlive: 1
+  folderPool:
+    prefix: FOLDER-
+    max: 2
+    core: 2
+    keepAlive: 1
+
+kafka:
+  bootstrapAddress: localhost:9092
+  groupId: arxivReader
+  topic:
+    name: arxiv-test
+
+logging:
+  level:
+    org:
+      apache:
+        kafka: OFF

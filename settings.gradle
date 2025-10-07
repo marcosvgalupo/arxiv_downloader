@@ -1,0 +1,6 @@
+rootProject.name = 'arxiv-solution'
+include 'arxiv-downloader'
+include 'arxiv-reader'
+include 'arxiv-processor'
+include 'arxiv-global'
+

@@ -1,0 +1,36 @@
+spring:
+  application:
+    description: Arxiv processor is a micro service to process arxiv pages and extract data
+    name: arxiv-processor
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/arXiv_meta
+    username: root
+    password: 123456
+
+server:
+  port: 9096
+
+threads:
+  page:
+    prefix: PAGE-
+    max: 32
+    core: 8
+    keepAlive: 240
+
+kafka:
+  bootstrapAddress: localhost:9092
+  groupId: arxivReader
+  topic:
+    name: arxiv-test
+    partition: 0
+
+files:
+  folder-out: C:\Users\filip\Documents\projetos\arxiv-solution\arxiv-processor\build\libs
+  output-format: mml
+
+logging:
+  level:
+    org:
+      apache:
+        kafka: OFF
