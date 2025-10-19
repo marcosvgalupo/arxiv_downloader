@@ -5,8 +5,8 @@ spring:
 
 folder:
   list:
-    - C:\Users\filip\Documents\arvix_pages\folder_1
-    - C:\Users\filip\Documents\arvix_pages\folder_2
+    - /home/leandro/arvix_pages/folder_1
+    - /home/leandro/arvix_pages/folder_2
 
 threads:
   readerPool:
