@@ -3,10 +3,11 @@ spring:
     description: Arxiv reader is a micro service for read of arxiv pages from disk
     name: arxiv-reader
 
+
 folder:
   list:
-    - C:\Users\filip\Documents\arvix_pages\folder_1
-    - C:\Users\filip\Documents\arvix_pages\folder_2
+    - /home/leandro/arxiv_pages/folder_1
+    - /home/leandro/arxiv_pages/folder_2
 
 threads:
   readerPool:
@@ -31,3 +32,5 @@ logging:
     org:
       apache:
         kafka: OFF
+server:
+  port: 9097
