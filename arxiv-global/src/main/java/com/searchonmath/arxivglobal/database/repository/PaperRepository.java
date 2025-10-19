@@ -14,7 +14,7 @@ public interface PaperRepository extends CrudRepository<Paper, String> {
 
     @Transactional
     @Modifying
-    @Query(value = "UPDATE oai2 SET co_src = :coSrc WHERE id = :id", nativeQuery = true)
+    @Query(value = "UPDATE oai SET co_src = :coSrc WHERE id = :id", nativeQuery = true)
     void savePaperCoSrc(@Param("id") String id, @Param("coSrc") byte[] coSrc);
 
 }

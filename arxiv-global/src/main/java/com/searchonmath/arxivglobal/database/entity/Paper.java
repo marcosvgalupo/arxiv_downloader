@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Table(name = "oai2")
+@Table(name = "oai")
 @Getter
 @Setter
 @AllArgsConstructor

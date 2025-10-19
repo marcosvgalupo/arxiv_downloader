@@ -4,9 +4,9 @@ spring:
     name: arxiv-downloader
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/arXiv
-    username: lares
-    password: LARES2022som!
+    url: jdbc:mariadb://localhost:3306/airflow
+    username: searchonmath
+    password: searchonmath
 
 feign:
   httpclient:
@@ -34,6 +34,6 @@ config:
     sleep: 1000
 
 files:
-  folder-out: /home/lares/arxiv_pages/
+  folder-out: /home/leandro/arxiv_pages/
   checkSum-algorithm: MD5
   output-format: .html
