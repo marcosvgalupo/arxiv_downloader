@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Table(schema = "arXiv", name = "oai2")
+@Table(schema = "airflow", name = "oai")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -37,8 +37,10 @@ public class Paper implements Serializable {
 
     private String categories;
 
+    @Column(name="report_no")
     private String reportNo;
 
+    @Column(name="journal_ref")
     private String journalRef;
 
     private String doi;

@@ -20,7 +20,7 @@ threads:
 
 kafka:
   bootstrapAddress: localhost:9092
-  groupId: arxivReader
+  groupId: arxivProcessor
   topic:
     name: arxiv-test
     partition: 0
