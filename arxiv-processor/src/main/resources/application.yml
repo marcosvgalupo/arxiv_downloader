@@ -4,9 +4,9 @@ spring:
     name: arxiv-processor
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/arXiv_meta
-    username: root
-    password: 123456
+    url: jdbc:mariadb://localhost:3306/airflow
+    username: searchonmath
+    password: searchonmath
 
 server:
   port: 9096
@@ -26,7 +26,7 @@ kafka:
     partition: 0
 
 files:
-  folder-out: C:\Users\filip\Documents\projetos\arxiv-solution\arxiv-processor\build\libs
+  folder-out: /home/leandro/testmml
   output-format: mml
 
 logging:
